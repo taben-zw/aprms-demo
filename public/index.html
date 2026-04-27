@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APRMS Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Automated Parking Revenue Management System</h1>
+      <p>City of Bulawayo Demo Prototype</p>
+    </header>
+
+    <section class="card">
+      <h2>1. Vehicle Identification / ANPR Mock</h2>
+      <form id="scanForm">
+        <label for="plate">Enter vehicle registration number</label>
+        <input id="plate" name="plate" placeholder="e.g. ABC1234" required />
+        <button type="submit">Scan Vehicle</button>
+      </form>
+      <p class="hint">Try: ABC1234, BCD2345, CDE3456, DEF4567, EFG5678</p>
+    </section>
+
+    <section class="card" id="invoiceCard" hidden>
+      <h2>2. Automated Billing</h2>
+      <div id="invoiceDetails"></div>
+      <button id="payBtn">Pay with Tap Card</button>
+    </section>
+
+    <section class="card" id="receiptCard" hidden>
+      <h2>3. Receipt / Audit Trail</h2>
+      <pre id="receipt"></pre>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>4. Reporting Dashboard</h2>
+        <div>
+          <button id="refreshBtn">Refresh Dashboard</button>
+          <button id="resetBtn">Reset Demo</button>
+        </div>
+      </div>
+      <div id="stats" class="stats"></div>
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Plate</th>
+            <th>Type</th>
+            <th>Fee ($)</th>
+            <th>Payment</th>
+            <th>Gate</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody id="transactionsTable"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

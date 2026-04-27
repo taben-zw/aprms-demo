@@ -1,0 +1,12 @@
+[
+  {
+    "transactionId": "TXN-1776599108150",
+    "invoiceId": "INV-1",
+    "plate": "ABC1234",
+    "type": "Small Vehicle",
+    "fee": 1,
+    "paymentMethod": "Tap Card",
+    "gateStatus": "OPEN",
+    "paidAt": "2026-04-19T11:45:08.150Z"
+  }
+]
